@@ -32,4 +32,13 @@ fazendo o build para produção
 npm run build
 ```
 
+### Instalar ESLint para checagem de tipos e encontrar problemas no codigo
+
+instalar e configurar 
+
+```sh
+npm init @eslint/config
+```
+
+
  
