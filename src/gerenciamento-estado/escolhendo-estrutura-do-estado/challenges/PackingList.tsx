@@ -1,0 +1,32 @@
+import { DataItem } from "./conserte-uma-lista-de-embalagem-quebrada";
+
+type PropsPackingList = {
+  items: DataItem[];
+  onChangeItem: (nextItem: DataItem) => void;
+  onDeleteItem: (itemId: number) => void;
+};
+
+export default function PackingList({ items, onChangeItem, onDeleteItem } : PropsPackingList) {
+  return (
+    <ul>
+      {items.map((item) => (
+        <li key={item.id}>
+          <label>
+            <input
+              type="checkbox"
+              checked={item.packed}
+              onChange={(e) => {
+                onChangeItem({
+                  ...item,
+                  packed: e.target.checked,
+                });
+              }}
+            />{" "}
+            {item.title}
+          </label>
+          <button onClick={() => onDeleteItem(item.id)}>Delete</button>
+        </li>
+      ))}
+    </ul>
+  );
+}

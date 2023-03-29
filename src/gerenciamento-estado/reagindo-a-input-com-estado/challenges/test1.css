@@ -1,0 +1,24 @@
+.background{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-flow: row nowrap;
+   align-items: center;
+   justify-content: center;
+}
+
+.background--active{
+    background-color:cadetblue;
+}
+
+.picture{
+    display: block;
+    max-width: 100%;
+    width: 300px;
+    height: 200px;
+}
+
+.picture--active{
+    border-radius: 15px;
+    border: 3px solid cadetblue;
+}
