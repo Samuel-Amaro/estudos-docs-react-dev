@@ -66,21 +66,20 @@ export default function TasksProvider({ children }: PropsTasksProvider) {
 //são hooks customizados que leem contexto
 //functions de Custom Hooks
 export function useTasks() {
-    const tasksContext = useContext(TasksContext);
-    if(!tasksContext) {
-        throw Error("Context tasks error");
-    }
-    return tasksContext;
+  const tasksContext = useContext(TasksContext);
+  if (!tasksContext) {
+    throw Error("Context tasks error");
+  }
+  return tasksContext;
 }
 
 export function useTasksDispatch() {
-    const dispacContext = useContext(TasksDispatchContext);
-    if (!dispacContext) {
-      throw Error("Context dispatch error");
-    }
-    return dispacContext;
+  const dispacContext = useContext(TasksDispatchContext);
+  if (!dispacContext) {
+    throw Error("Context dispatch error");
+  }
+  return dispacContext;
 }
-
 
 /**
  * Uma função redutora é onde você colocará sua lógica de estado. Ele recebe dois argumentos, o estado atual e o objeto de ação, e retorna o próximo estado
